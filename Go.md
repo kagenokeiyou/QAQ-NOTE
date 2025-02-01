@@ -59,7 +59,7 @@ func main {
 
 ## 关键字
 
-```go
+```text
 break        default      func         interface    select
 case         defer        go           map          struct
 chan         else         goto         package      switch
@@ -69,7 +69,7 @@ continue     for          import       return       var
 
 ## 运算符
 
-```go
+```text
 +    &     +=    &=     &&    ==    !=    (    )
 -    |     -=    |=     ||    <     <=    [    ]
 *    ^     *=    ^=     <-    >     >=    {    }
@@ -79,6 +79,50 @@ continue     for          import       return       var
 ```
 
 懂得都懂，不懂的我也不多解释🤗
+
+## 数据类型
+
+有符号整数：`int` `int8` `int16` `int32` `int64`  
+
+无符号整数：`uint` `uint8` `uint16` `uint32` `uint64`  
+
+> [!NOTE]
+> `int` 和 `uint` 的长度为 32 或 64，与操作系统相关🤓👆
+
+`uintptr`：用于存放指针
+
+浮点数：`float32` `float64`
+
+复数类型：`complex64` `complex128`
+
+`bool`：`true` 或 `false`
+
+`byte`：`uint8` 的别名，用来表示字节。
+
+`string`：UTF-8 字符串，不可变，用双引号包裹字符串字面值，用反引号包裹原始字符串字面值
+
+`rune`：`int32` 的别名，用来表示字符，用单引号包裹
+
+这样创建类型别名喵~
+
+```go
+type myint = int64
+type myfloat float64
+```
+
+## 类型转换
+
+> [!CAUTION]  
+> 此内容未完成
+
+Go 中的整数类型与浮点类型不能混用，需要转换喵~
+
+从浮点转化为整数，小数点会被截断哦！
+
+有符号整数与无符号整数需要类型转换  
+不同大小的整数类型之间也需要类型转换
+
+转换时超过最大值会发生环绕喵~
 
 ## 常量与变量的声明
 
